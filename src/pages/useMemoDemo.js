@@ -20,6 +20,9 @@ const WithoutUseMemoDemo = () => {
 
   return (
       <div className="text-center">
+        <h1>Without useMemo</h1>
+        <p>Clicking the calculate button will trigger the calculation every time</p>
+        <br/>
         <p>Num: {num} </p>
         <p><RandomColoredButton onClick={() => setNum(Math.ceil(Math.random() * 100))}>Next random
           number</RandomColoredButton></p>
@@ -61,6 +64,9 @@ const UseMemoDemo = () => {
 
   return (
       <div className="text-center">
+        <h1>With useMemo</h1>
+        <p>Clicking the calculate button will trigger the calculation only when the target num changes</p>
+        <br/>
         <p>Num: {num} </p>
         <p><RandomColoredButton
             onClick={useCallback(() => setNum(Math.ceil(Math.random() * 100)), [])}>Next random
@@ -83,5 +89,19 @@ const UseMemoDemo = () => {
   );
 };
 
-export default WithoutUseMemoDemo;
-// export default UseMemoDemo;
+
+const Container = () => {
+
+  return <div className="flex">
+    <div className="flex-1">
+      <WithoutUseMemoDemo/>
+    </div>
+    <div className="flex-1">
+      <UseMemoDemo/>
+    </div>
+
+  </div>
+}
+
+
+export default Container;

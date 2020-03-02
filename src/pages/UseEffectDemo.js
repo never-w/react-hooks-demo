@@ -14,7 +14,9 @@ const UseEffectDemo = () => {
   });
 
   return (
-      <div className="w-full">
+      <div className="w-full text-center">
+        <p>The counter is increasing with a timer</p>
+        <br/>
         <h1 className="text-center text-4xl">{counter}</h1>
       </div>
   );
