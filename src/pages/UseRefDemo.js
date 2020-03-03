@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import RandomColoredButton from '../components/RandomColoredButton';
+import Button from '../components/Button';
 
 const UseRefDemo = () => {
   const inputEl = useRef(null);
@@ -14,7 +14,7 @@ const UseRefDemo = () => {
         <p><input className="text-black border-black  border-solid border pl-2" ref={inputEl}
                   type="text"/></p>
         <p>
-          <RandomColoredButton onClick={onButtonClick}>Focus the input</RandomColoredButton>
+          <Button onClick={onButtonClick}>Focus the input</Button>
         </p>
       </div>
   );

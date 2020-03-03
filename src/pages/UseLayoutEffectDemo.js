@@ -1,5 +1,5 @@
 import React, {useEffect, useLayoutEffect, useState} from 'react';
-import RandomColoredButton from '../components/RandomColoredButton';
+import Button from '../components/Button';
 
 const UseEffectDemo = () => {
 
@@ -18,7 +18,7 @@ const UseEffectDemo = () => {
       <div className="text-center">
         <p>value: {value}</p>
         <p>
-          <RandomColoredButton onClick={() => setValue(0)}>Start</RandomColoredButton>
+          <Button onClick={() => setValue(0)}>Start</Button>
         </p>
         <br/>
         <p>click the button, the view will flicker because of twice rendering in short time</p>
@@ -42,7 +42,7 @@ const UseLayoutEffectDemo = () => {
       <div className="text-center">
         <p>value: {value}</p>
         <p>
-          <RandomColoredButton onClick={() => setValue(0)}>Start</RandomColoredButton>
+          <Button onClick={() => setValue(0)}>Start</Button>
         </p>
         <br/>
         <p>click the button, the view will have no flicker issue</p>

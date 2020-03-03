@@ -1,5 +1,5 @@
 import React, {useCallback, useMemo, useState} from 'react';
-import RandomColoredButton from '../components/RandomColoredButton';
+import Button from '../components/Button';
 
 const WithoutUseMemoDemo = () => {
 
@@ -24,17 +24,17 @@ const WithoutUseMemoDemo = () => {
         <p>Clicking the calculate button will trigger the calculation every time</p>
         <br/>
         <p>Num: {num} </p>
-        <p><RandomColoredButton onClick={() => setNum(Math.ceil(Math.random() * 100))}>Next random
-          number</RandomColoredButton></p>
+        <p><Button onClick={() => setNum(Math.ceil(Math.random() * 100))}>Next random
+          number</Button></p>
 
         <p className="mt-8">The {num}th fibonacci number: {fibonacci}</p>
         <p>Calculate fibonacci number for {times} times</p>
-        <p><RandomColoredButton onClick={() => setFibonacci(fibonacciCalculator(num))}>Calculate
-          fibonacci number</RandomColoredButton></p>
+        <p><Button onClick={() => setFibonacci(fibonacciCalculator(num))}>Calculate
+          fibonacci number</Button></p>
         <p>
-          <RandomColoredButton onClick={() => setFibonacci(0)}>
+          <Button onClick={() => setFibonacci(0)}>
             Reset fibonacci number
-          </RandomColoredButton>
+          </Button>
         </p>
       </div>
   );
@@ -68,22 +68,22 @@ const UseMemoDemo = () => {
         <p>Clicking the calculate button will trigger the calculation only when the target num changes</p>
         <br/>
         <p>Num: {num} </p>
-        <p><RandomColoredButton
+        <p><Button
             onClick={useCallback(() => setNum(Math.ceil(Math.random() * 100)), [])}>Next random
-          number</RandomColoredButton></p>
+          number</Button></p>
 
         <p className="mt-8">The {num}th fibonacci number: {fibonacci}</p>
         <p>Calculate fibonacci number for {times} times</p>
         <p>
-          <RandomColoredButton
+          <Button
               onClick={useCallback(() => setFibonacci(fibonacciByCalculated), [fibonacciByCalculated])}>
             Calculate fibonacci number
-          </RandomColoredButton>
+          </Button>
         </p>
         <p>
-          <RandomColoredButton onClick={useCallback(() => setFibonacci(0), [])}>
+          <Button onClick={useCallback(() => setFibonacci(0), [])}>
             Reset fibonacci number
-          </RandomColoredButton>
+          </Button>
         </p>
       </div>
   );

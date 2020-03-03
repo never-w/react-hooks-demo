@@ -1,5 +1,5 @@
 import React, {forwardRef, useImperativeHandle, useRef} from 'react';
-import RandomColoredButton from '../components/RandomColoredButton';
+import Button from '../components/Button';
 
 
 const FancyInput = forwardRef((props, ref) => {
@@ -28,10 +28,10 @@ const UseImperativeHandlerDemo = () => {
         <FancyInput ref={ref}/>
 
         <br/>
-        <RandomColoredButton onClick={e => {
+        <Button onClick={e => {
           // call the custom method
           ref.current.focusMe()
-        }}>Click me to focus fancy input</RandomColoredButton>
+        }}>Click me to focus fancy input</Button>
         <br/>
         <p>Basically, there is few situation where you need to use userImperativeHandler.<br/>
           I would recommend to check out this Youtube video
