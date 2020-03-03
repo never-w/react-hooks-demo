@@ -1,6 +1,10 @@
 {
   "name": "react-hook-demo",
   "version": "0.1.0",
+  "author": {
+    "name": "FreewheelLee",
+    "site": "https://www.zhihu.com/people/freewheel-lee"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
